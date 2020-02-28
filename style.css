@@ -45,3 +45,22 @@ button {
 .hidden {
     display: none;
 }
+
+.welcomeStatement {
+    font-size: 10pt;
+    font-style: oblique;
+}
+
+/* .card img {
+    height: 150px;
+    width: 250px;
+} */
+
+.card{
+    padding: 8px;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+  }

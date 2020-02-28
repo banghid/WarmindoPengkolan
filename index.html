@@ -4,16 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css"> 
     <title>Warmindo Pengkolan</title>
 </head>
 <body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Warmindo Pengkolan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+          <!-- <button class="btn btn-outline-success my-4 my-sm-2" type="submit">Login</button> -->
+            <button id="btnLogin" class="btn btn-outline-success my-4 my-sm-2" type="submit">Login</button>
+            <button id="btnLogout" class="btn btn-outline-danger my-4 my-sm-2" type="submit">Logout</button>
+        </div>
+        
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Welcome statement start -->
+    <div>
+      <p class="welcomeStatement" id="welcomeStatement">
+          Anda Belum Login!!
+      </p>
+    </div>
+      <!-- Welcome statement end -->
+
+      <!-- Menu Start -->
+    <div id="appContent">
+        <p>
+
+            Pilih menu Makanan Indomie
+        </p>
+
+        <div class="card">
+            <div class="card-header">
+                Makanan
+              </div>
+            <div class="card-body"></div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-4">
+                        <div class="card">
+                            <!-- <img class="card-img-top" src="image/indomie-goreng.png" alt="Card image cap" style="width: 100%;"> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Mie Goreng</h5>
+                                <p class="card-text">Indomie Goreng dengan telur dan pelengkap sayuran dengan citarasa dan aroma yang khas.</p>
+                                <p>Jumlah Pesanan: </p>
+                                <p id="jmlh-goreng">0</p>
+                                <div class="row">
+                                    <a href="#" class="btn btn-primary mr-auto offset-md-1 offset-sm-1" style="width: 28px;"> - </a>
+                                    <a href="#" class="btn btn-primary offset-md-1 offset-sm-1" > + </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <div class="card">
+                            <!-- <img class="card-img-top" src="image/indomie-goreng.png" alt="Card image cap" style="width: 100%;"> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Mie Rebus</h5>
+                                <p class="card-text">Indomie Rebus dengan sayur lengkap ditamha telur dan bawang goreng yang nikmat.</p>
+                                <p>Jumlah Pesanan: </p>
+                                <p id="jmlh-rebus">0</p>
+                                <div class="row">
+                                    <a href="#" class="btn btn-primary mr-auto offset-md-1 offset-sm-1" style="width: 28px;"> - </a>
+                                    <a href="#" class="btn btn-primary offset-md-1 offset-sm-1" > + </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <div class="card">
+                            <!-- <img class="card-img-top" src="image/indomie-goreng.png" alt="Card image cap" style="width: 100%;"> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Mie Rendang</h5>
+                                <p class="card-text">Indomie Rendang dengan tambahan bumbu rendang asli dari padang dan sayuran lengkap.</p>
+                                <p>Jumlah Pesanan: </p>
+                                <p id="jmlh-rendang">0</p>
+                                <div class="row">
+                                    <a href="#" class="btn btn-primary mr-auto offset-md-1 offset-sm-1" style="width: 28px;"> - </a>
+                                    <a href="#" class="btn btn-primary offset-md-1 offset-sm-1" > + </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4">
+                        <div class="card">
+                            <!-- <img class="card-img-top" src="image/indomie-goreng.png" alt="Card image cap" style="width: 100%;"> -->
+                            <div class="card-body">
+                                <h5 class="card-title">Mie Kari</h5>
+                                <p class="card-text">Indomie Kari dengan tambahan sayur dan telur cocok dinikmati saat hujan dan cuaca mendung.</p>
+                                <p>Jumlah Pesanan: </p>
+                                <p id="jmlh-kari">0</p>
+                                <div class="row">
+                                    <a href="#" class="btn btn-primary mr-auto offset-md-1 offset-sm-1" style="width: 28px;"> - </a>
+                                    <a href="#" class="btn btn-primary offset-md-1 offset-sm-1" > + </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+      <!-- Menu end -->
+
+
+    
+      <!-- Order Detail start -->
+
+    <div class="card">
+        <div class="card-header">
+            Pesanan
+        </div>
+        <p>
+            Belum ada pesanan
+        </p>
+
+    </div>
+
+    <!-- Order Detail end -->
+
+    <div class="row">
+        <button id="btnPesan" class="btn-success col-md-2 col-sm-2 offset-md-5 offset-sm-5">
+            Pesan
+        </button>
+    </div>
     
 </body>
 <!-- <script src="hitung-config.js"></script> -->
+<!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- LIFF -->
 <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
 <!-- <script src="liff-starter.js"></script> -->
 </html>
