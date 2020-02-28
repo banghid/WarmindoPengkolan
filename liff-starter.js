@@ -3,6 +3,7 @@ window.onload = function(){
 	const defaultLiffId = "1653765752-6X1g1ge2";
 
 	let myLiffId = "";
+	let name = "";
 
 	if (useNodeJs) {
 		fetch('/send-id')
@@ -39,6 +40,14 @@ function initializeLiff(myLiffId){
 		})
 		.then(() => {
 			initializeApp();
+			liff
+				.getProfile()
+				.then(profile => {
+				name = profile.displayName
+				})
+				.catch((err) => {
+				console.log('error', err);
+				});
 		})
 		.catch((err) => {
 			document.getElementById("appContent").classList.add('hidden');
@@ -53,7 +62,7 @@ function initializeApp(){
 
 	if (liff.isLoggedIn()) {
 		document.getElementById('btnLogin').disabled = true;
-		var text = "Selamat datang "+ +" di Warmindo Pengkolan !!!"
+		var text = "Selamat datang "+ name +" di Warmindo Pengkolan !!!"
 		document.getElementById('welcomeStatement').textContent = text;
 	} else {
 		document.getElementById('btnLogout').disabled = true;
