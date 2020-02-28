@@ -89,7 +89,7 @@ function displayIsInClientInfo(){
 function registerButtonHandlers(){
 	document.getElementById('openWindowButton').addEventListener('click', function(){
 		liff.openWindow({
-			url: 'https://study.banghid.com/warmindo/',
+			url: 'https://warmindo.herokuapp.com/',
 			external: true
 		});
 	});
