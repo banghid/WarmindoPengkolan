@@ -87,14 +87,14 @@ function displayIsInClientInfo(){
 }
 
 function registerButtonHandlers(){
-	document.getElementById('openWindowButton').addEventListener('click', function(){
+	document.getElementById('btnOpenWindow').addEventListener('click', function(){
 		liff.openWindow({
 			url: 'https://warmindo.herokuapp.com/',
 			external: true
 		});
 	});
 
-	document.getElementById('closeWindowButton').addEventListener('click', function(){
+	document.getElementById('btnClose').addEventListener('click', function(){
 		if (!liff.isInClient()) {
 			sendAlertIfNotInClient();
 		} else {
