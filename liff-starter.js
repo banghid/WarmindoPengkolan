@@ -60,8 +60,6 @@ function initializeApp(){
 
 	if (liff.isLoggedIn()) {
 		document.getElementById('btnLogin').disabled = true;
-		var text = "Selamat datang "+ name +" di Warmindo Pengkolan !!!"
-		document.getElementById('welcomeStatement').textContent = text;
 	} else {
 		document.getElementById('btnLogout').disabled = true;
 		document.getElementById('welcomeStatement').textContent = 'Anda belum Login, login lah dengan akun LINE anda terlebih dahulu !!';
@@ -143,12 +141,16 @@ function toggleElement(elementId){
 }
 
 function getUserProfile(){
+	
 	liff
 		.getProfile()
 		.then(profile => {
-			name = profile.displayName
+			const name = profile.displayName
+			var text = "Selamat datang "+ name +" di Warmindo Pengkolan !!!"
+			document.getElementById('welcomeStatement').textContent = text;
 		})
 		.catch((err) => {
 			console.log('error', err);
 		});
+
 }
