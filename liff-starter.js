@@ -3,7 +3,7 @@ window.onload = function(){
 	const defaultLiffId = "1653765752-6X1g1ge2";
 
 	let myLiffId = "";
-	let name = "";
+	var name = "";
 
 	if (useNodeJs) {
 		fetch('/send-id')
