@@ -125,6 +125,71 @@ function registerButtonHandlers(){
 			});
 		}
 	});
+
+	document.getElementById('btnMinGoreng').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-goreng").textContent);
+		if(jumlah != 0){
+			jumlah--;
+			document.getElementById("jmlh-goreng").textContent = jumlah;
+		}
+	});
+
+	document.getElementById('btnPlusGoreng').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-goreng").textContent);
+
+		jumlah++;
+		document.getElementById("jmlh-goreng").textContent = jumlah;
+		
+	});
+
+	document.getElementById('btnMinRebus').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-rebus").textContent);
+		if(jumlah != 0){
+			jumlah--;
+			document.getElementById("jmlh-rebus").textContent = jumlah;
+		}
+	});
+
+	document.getElementById('btnPlusRebus').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-rebus").textContent);
+		
+		jumlah++;
+		document.getElementById("jmlh-rebus").textContent = jumlah;
+		
+	});
+
+	document.getElementById('btnMinRendang').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-rendang").textContent);
+		if(jumlah != 0){
+			jumlah--;
+			document.getElementById("jmlh-rendang").textContent = jumlah;
+		}
+	});
+
+	document.getElementById('btnPlusRendang').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-rendang").textContent);
+		
+		jumlah++;
+		document.getElementById("jmlh-rendang").textContent = jumlah;
+		
+	});
+
+	document.getElementById('btnMinKari').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-Kari").textContent);
+		if(jumlah != 0){
+			jumlah--;
+			document.getElementById("jmlh-kari").textContent = jumlah;
+		}
+	});
+
+	document.getElementById('btnPlusKari').addEventListener('click', function(){
+		var jumlah = parseInt(document.getElementById("jmlh-kari").textContent);
+		
+		jumlah++;
+		document.getElementById("jmlh-kari").textContent = jumlah;
+		
+	});
+	
 }
 
 function sendAlertIfNotInClient(){
