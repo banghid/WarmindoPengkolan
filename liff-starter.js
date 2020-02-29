@@ -40,14 +40,14 @@ function initializeLiff(myLiffId){
 		})
 		.then(() => {
 			initializeApp();
-			liff
-				.getProfile()
-				.then(profile => {
-				name = profile.displayName
-				})
-				.catch((err) => {
-				console.log('error', err);
-				});
+			// liff
+			// 	.getProfile()
+			// 	.then(profile => {
+			// 	name = profile.displayName
+			// 	})
+			// 	.catch((err) => {
+			// 	console.log('error', err);
+			// 	});
 		})
 		.catch((err) => {
 			document.getElementById("appContent").classList.add('hidden');
