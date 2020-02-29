@@ -27,7 +27,7 @@ window.onload = function(){
 
 function initializeLiffOrDie(myLiffId){
 	if (!myLiffId) {
-		document.getElementById("appContent").classList.add('hidden');
+		// document.getElementById("appContent").classList.add('hidden');
 		document.getElementById("liffIdErrorMessage").classList.remove('hidden');
 		document.getElementById("welcomeStatement").textContent = "Got error in not using myLiffId";
 	} else {
