@@ -42,14 +42,7 @@ function initializeLiff(myLiffId){
 		})
 		.then(() => {
 			initializeApp();
-			// liff
-			// 	.getProfile()
-			// 	.then(profile => {
-			// 	name = profile.displayName
-			// 	})
-			// 	.catch((err) => {
-			// 	console.log('error', err);
-			// 	});
+			getUserProfile();
 		})
 		.catch((err) => {
 			// document.getElementById("appContent").classList.add('hidden');
@@ -147,4 +140,15 @@ function toggleElement(elementId){
 	} else {
 		elem.style.display = 'block';
 	}
+}
+
+function getUserProfile(){
+	liff
+		.getProfile()
+		.then(profile => {
+			name = profile.displayName
+		})
+		.catch((err) => {
+			console.log('error', err);
+		});
 }
