@@ -140,7 +140,7 @@ function registerButtonHandlers(){
 
 			liff.sendMessages([{
 				'type' : 'text',
-				'text' : "Anda telah Memesan: \n\n" + textTemp + "\nTerima Kasih telah memesan di Warmindo Pengkolan Pesanan akan segera diantar oleh jasa Ojek onlen \n Terimakasih."
+				'text' : "Anda telah Memesan: \n\n" + textTemp + "\nTerima Kasih telah memesan di Warmindo Pengkolan Pesanan akan segera diantar oleh jasa Ojek onlen \n\n Terimakasih."
 			}]).then(function(){
 				window.alert('Ini adalah pesan dari fitur Send Message');
 			}).catch(function(error){
