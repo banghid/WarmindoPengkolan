@@ -115,9 +115,32 @@ function registerButtonHandlers(){
 		if (!liff.isInClient()) {
 			sendAlertIfNotInClient();
 		} else {
+			var jmlhGoreng = parseInt(document.getElementById("jmlh-goreng").textContent)
+			var jmlhRebus = parseInt(document.getElementById("jmlh-rebus").textContent)
+			var jmlhRendang = parseInt(document.getElementById("jmlh-rendang").textContent)
+			var jmlhKari = parseInt(document.getElementById("jmlh-kari").textContent)
+
+			var textTemp = ""
+
+			if(jmlhGoreng !=0 ){
+				textTemp +=  jmlhGoreng + " Indomie Goreng\n";
+			}
+
+			if(jmlhRebus !=0 ){
+				textTemp +=  jmlhRebus + " Indomie Rebus\n";
+			}
+
+			if(jmlhRendang !=0 ){
+				textTemp +=  jmlhRendang + " Indomie Rendang\n";
+			}
+
+			if(jmlhKari !=0 ){
+				textTemp +=  jmlhKari + " Indomie Kari\n";
+			}
+
 			liff.sendMessages([{
 				'type' : 'text',
-				'text' : "Anda telah menggunakan fitur Send Message!"
+				'text' : "Anda telah Memesan: \n" + textTemp + " Terima Kasih telah memesan di Warmindo Pengkolan Pesanan akan segera diantar oleh jasa Ojek onlen \n Terimakasih."
 			}]).then(function(){
 				window.alert('Ini adalah pesan dari fitur Send Message');
 			}).catch(function(error){
