@@ -42,7 +42,6 @@ function initializeLiff(myLiffId){
 		})
 		.then(() => {
 			initializeApp();
-			getUserProfile();
 		})
 		.catch((err) => {
 			// document.getElementById("appContent").classList.add('hidden');
@@ -54,6 +53,7 @@ function initializeLiff(myLiffId){
 }
 
 function initializeApp(){
+	getUserProfile();
 	displayLiffData();
 	displayIsInClientInfo();
 	registerButtonHandlers();
