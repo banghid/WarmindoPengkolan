@@ -16,7 +16,7 @@ window.onload = function(){
 			})
 			.catch(function(error){
 				document.getElementById("appContent").classList.add('hidden');
-				// document.getElementById("nodeLiffIdErrorMessage").classList.remove('hidden');
+				document.getElementById("nodeLiffIdErrorMessage").classList.remove('hidden');
 				document.getElementById("welcomeStatement").textContent = "Got error in USENODEJS: " + error;
 			});
 	} else{
@@ -28,7 +28,7 @@ window.onload = function(){
 function initializeLiffOrDie(myLiffId){
 	if (!myLiffId) {
 		document.getElementById("appContent").classList.add('hidden');
-		// document.getElementById("liffIdErrorMessage").classList.remove('hidden');
+		document.getElementById("liffIdErrorMessage").classList.remove('hidden');
 		document.getElementById("welcomeStatement").textContent = "Got error in not using myLiffId";
 	} else {
 		initializeLiff(myLiffId);
@@ -54,7 +54,7 @@ function initializeLiff(myLiffId){
 		.catch((err) => {
 			// document.getElementById("appContent").classList.add('hidden');
 			console.log('error', err);
-			// document.getElementById("liffInitErrorMessage").classList.remove('hidden');
+			document.getElementById("liffInitErrorMessage").classList.remove('hidden');
 			document.getElementById("welcomeStatement").textContent = "Got error in LIFF Init: " + err;
 			
 		});
